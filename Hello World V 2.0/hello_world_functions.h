@@ -24,6 +24,12 @@
 void setup(){
     TRISA=0b00000111; //setting RA[7:0] as input/out  with output=0
     PORTA=0;         //clearing any prestored values in RA registers
+    ANSELAbits.ANSA1 = 0;	//disable AN1 shared with RA1   Solves Input problem
+    ANSELAbits.ANSA2 = 0;	//disable AN2 shared with RA2
+    ANSELAbits.ANSA3 = 0;	//disable AN3 shared with RA3
+
+    
+    
     
 //    TRISB=0b00000111 //setting RB[7:0] as input/out  with output=0
 //    PORTB=0;         //clearing any prestored values in RB registers
@@ -36,49 +42,35 @@ void setup(){
  
 
 int hello_wrld_1(){
-    //LED_TRIS = 0; 
-
-    //PORTA=0;            // Writing a zero to everything to clear MCU
-    
     // Initial code to differentiate from each iteration
     LED1 = 1;
-    __delay_ms(5000);
+    __delay_ms(1000);
     LED1 = 0;
-    __delay_ms(5000);
+    __delay_ms(1000);
     int i=0;
-    while(i<3)  // infinite while Loop (not ideal)
+    for(i=0; i<5; ++i)
         {
         LED1 = 1;            // Turn LED on
-        __delay_ms(1000);  // wait 1 sec
+        __delay_ms(100);  // wait 0.1 sec
         LED1 = 0;            // Turn LED off
-        __delay_ms(1000);  // wait 1 sec
-        ++i;
+        __delay_ms(100);  // wait 0.1 sec
         }
     return 0;
 }
 
 int hello_wrld_2(){
-          // Writing a zero to everything to clear MCU
-    
-    // Initial code to differntiate from each itteration
+    // Initial code to differentiate from each iteration
     LED2 = 1;
-    __delay_ms(5000);
-    
-    // simple if statement to check input logic coding
-    if(Button1 == 1)
-        {
-        // quick flashing LED2
-        LED2 = 1;
-        __delay_ms(500);
-        LED2 = 0;
-        __delay_ms(500);
-        LED2 = 1;
-        __delay_ms(500);
-        LED2 = 0;
-        __delay_ms(500);
-    }    
+    __delay_ms(1000);
     LED2 = 0;
-    __delay_ms(5000);
+    __delay_ms(1000);
+    int j=0;
+    for(j=0; j<5; ++j)
+        {
+        LED2 = 1;            // Turn LED on
+        __delay_ms(250);  // wait 0.25 sec
+        LED2 = 0;            // Turn LED off
+        __delay_ms(250);  // wait 0.25 sec
+        }
     return 0;
-
 }
