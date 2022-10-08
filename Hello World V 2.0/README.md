@@ -1,7 +1,6 @@
 This will be version 2 of the Hello World (Blinking LED) Program
 
-As of uploading code... STATUS= = Working
-
+STATUS = Working
 
 This version will include 2 inputs (2 buttons)
 These buttons determine which led flashes
