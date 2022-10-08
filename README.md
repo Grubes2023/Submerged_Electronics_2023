@@ -2,5 +2,5 @@
 TAMU 2023 Human Submarine Team - Electrical Subteam
 
 Team Members
-  Brandon Graeber, Ian Chen, Kenton Burgonoh, Saalaar Ahmed
+  Brandon Graeber, Ian Wang, Kenton Burgonoh, Saalaar Ahmed
   
