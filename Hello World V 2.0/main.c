@@ -5,8 +5,13 @@
 // main will be recalled as long as MCU is on
 int main(){
     setup();
-    hello_wrld_1();       // 
-    hello_wrld_2();         //button controlled: still not working
-    __delay_ms(1000);
+    if(Button1)
+    {
+        hello_wrld_1();
+    }  
+    if(Button2)
+    {
+        hello_wrld_2();
+    }
     return 0;
 }
