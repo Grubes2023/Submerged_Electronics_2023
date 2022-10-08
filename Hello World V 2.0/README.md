@@ -1,5 +1,8 @@
 This will be version 2 of the Hello World (Blinking LED) Program
 
+As of uploading code... STATUS= Not fully working
+
+
 This version will include 2 inputs (2 buttons)
 A special sub routine in Hello World 2 will engage if button is pressed
 
